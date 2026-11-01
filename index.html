@@ -13,32 +13,31 @@
             <h2>🎓 JJU Babile Student Union</h2>
             <p>Membership Registration Form</p>
         </div>
-
-        <form action="https://formspree.io/f/xbggzbor" method="POST"  id="unionForm" >
+ <form action="https://formspree.io/f/xbggzbor" method="POST"  id="unionForm" enctype="multipart/form-data" >
             <!-- Profile Picture Input -->
             <div class="input-group">
                 <label for="profilePic">Profile Picture (Photo)</label>
-                <input type="file" id="profilePic" accept="image/*" class="file-input">
+                <input type="file" id="profilePic" name="profilePic" accept="image/*" class="file-input" ">
             </div>
 
             <div class="input-group">
                 <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" required placeholder="Enter your full name">
+                <input type="text" id="fullname" required placeholder="Enter your full name" name="fullName">
             </div>
 
             <div class="input-group">
                 <label for="studentId">Student ID</label>
-                <input type="text" id="studentId" required placeholder="e.g., UGR/12345/14">
+                <input type="text" id="studentId"  name="studentId" required placeholder="e.g., UGR/12345/14">
             </div>
 
             <div class="input-group">
                 <label for="department">Department / Major</label>
-                <input type="text" id="department" required placeholder="e.g.,Software Engineering">
+                <input type="text" id="department" name="department" required placeholder="e.g.,Software Engineering">
             </div>
 
             <div class="input-group">
                 <label for="year">Academic Year</label>
-                <select id="year" required>
+                <select id="year" name="year" required>
                     <option value="" disabled selected>Select your year</option>
                     <option value="1st Year">1st Year/Freshman</option>
                     <option value="2nd Year">2nd Year</option>
@@ -50,18 +49,18 @@
 
             <div class="input-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" required placeholder="09........ / 07........">
+                <input type="tel" id="phone" name="phone" required placeholder="09........ / 07........">
             </div>
 
             <div class="input-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="example@gmail.com">
+                <input type="email" id="email" name="email" placeholder="example@gmail.com">
             </div>
 
             <div class="input-group">
                 <label for="role">Membership Type</label>
-                <select id="role">
-                    <option value="General Member">General Member</option>
+                <select id="role" name="role">
+                    <option value="General Member" >General Member</option>
                     <option value="Executive Member">Executive Member</option>
                     <option value="Volunteer/Organizer">Volunteer / Organizer</option>
                 </select>
@@ -70,7 +69,7 @@
             <!-- Message / Additional Info Input -->
             <div class="input-group">
                 <label for="message">Message / Additional Info (Optional)</label>
-                <textarea id="message" rows="3" placeholder="Write any message or idea you want to share with the union..."></textarea>
+                <textarea id="message" rows="3" name="message" placeholder="Write any message or idea you want to share with the union..."></textarea>
             </div>
 
             <button type="submit" class="submit-btn">Register Now</button>
